@@ -5,7 +5,7 @@
 
 .dropdown {
   width:25%;
-  margin: 0.5rem;
+  margin: 1.5rem 0.5rem 0rem 0;
   display: inline-block;
 }
 
@@ -15,7 +15,7 @@ button {
   cursor: pointer;
   padding: 10px;
   height: 2.2rem;
-  margin: 2px 0px;
+  margin: 2rem 0 2rem 0;
   width: 7rem;
   text-align: center;
   font-size: 14px;
@@ -24,8 +24,53 @@ button {
 .selection_box {
   background-color: #E5E5E5;
   border-radius: 1rem;
+  width: 99%;
+  margin: auto;
 }
 
 .header  {
   background-color: #14213D;
+  height: 10rem;
+  width: 100%;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+h1 {
+  margin-top: 12rem;
+}
+
+.logo {
+  height: 10rem;
+  width: 10rem;
+  background-color: #FCA311;
+  margin: 0 0 0 10px;
+  display: inline-box;
+  float: left;
+}
+
+div [name=semester] {
+  margin-top: 1rem;
+}
+
+.boxes {
+  width: 90%;
+  height: 100rem;
+  margin: auto;
+}
+
+.box {
+  background-color: #14213D;
+  height: 10rem;
+  width: 20rem;
+  margin: 10px auto; 
+  color: white;
+}
+
+.top_textbox {
+  margin-bottom: 2rem;
+  padding-top: 0.5rem;
 }
