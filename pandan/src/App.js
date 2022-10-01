@@ -1,14 +1,12 @@
 import './App.css';
 import React, {useState} from 'react';
 import Select from 'react-select';
-
-import { getcyb, getcscCourses } from './components/classData';
-
+import { getseg, getcyb, getcscCourses } from './components/classData';
+import ReactModal from 'react-modal';
 
 
 const App = () => {
 
-var cscCourses = getcscCourses();  
 const degrees = [
   {label: "Computer Science", value: 1},
 ];
@@ -49,11 +47,30 @@ const [classInfo, setClassInfo] = useState("classinfo")
 var tempCon = [];
 var yearInfo = []; 
 var semInfo = [];
+var cscCourses = getcscCourses();
+const [modal1IsOpen, set1IsOpen] = React.useState(false);
+const [modal2IsOpen, set2IsOpen] = React.useState(false);
+const [modal3IsOpen, set3IsOpen] = React.useState(false);
+const [modal4IsOpen, set4IsOpen] = React.useState(false);
+const [modal5IsOpen, set5IsOpen] = React.useState(false);
+const [modal6IsOpen, set6IsOpen] = React.useState(false);
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    height: 300,
+    width: 500,
+  },
+};
 
 function findClasses() {
   //setFirstClass(concentration.value)
   if(concentration.value == 1){
-    //tempCon = getSeg();
+    tempCon = getseg();
   }
   else if(concentration.value == 2){
     tempCon = getcyb();
@@ -87,58 +104,15 @@ function findClasses() {
       setSixthClass(cscCourses[i]);
     }
   }
-
-import ReactModal from 'react-modal';
-import {getcscCourses} from './components/classData';
-
-
-const App = () => {
-  const [modal1IsOpen, set1IsOpen] = React.useState(false);
-  const [modal2IsOpen, set2IsOpen] = React.useState(false);
-  const [modal3IsOpen, set3IsOpen] = React.useState(false);
-  const [modal4IsOpen, set4IsOpen] = React.useState(false);
-  const [modal5IsOpen, set5IsOpen] = React.useState(false);
-  const [modal6IsOpen, set6IsOpen] = React.useState(false);
-  
-  const customStyles = {
-    content: {
-      top: '50%',
-      left: '50%',
-      right: 'auto',
-      bottom: 'auto',
-      transform: 'translate(-50%, -50%)',
-      height: 300,
-      width: 500,
-      borderRadius: 20,
-    },
-  };
-
-  var cscCourses = getcscCourses();
-  
-  const degrees = [
-    {label: "Computer Science", value: 1},
-  ];
-  
-  const concentrations = [
-    {label: "Software Engineering", value: 1},
-    {label: "Cybersecurity", value: 2}
-  ];
-  
-  const years = [
-    {label: "2021", value: 1},
-    {label: "2022", value: 2}
-  ];
-  
 }
 
     return (
       <div className="App">
       <div className="header">
           <img className='logo' src="GeauxHackLogo.jpg"></img>
-          <h1 className='header_text'>Welcome to GEAUX DEG</h1>
       </div>
       
-      <h1></h1>
+      <h1>Welcome to GEAUX DEG</h1>
       <h2>Please select your degree, concentration, and booklet year.</h2>
 
       <div className='selection_box'>
@@ -186,108 +160,83 @@ const App = () => {
       </div>
 
       <div className='boxes'>
-
-          <div className='box'>
+          <div name='box1'className='box' onClick={() => set1IsOpen(true)}>
               <div className='top_textbox'>{firstClass[0]}</div>
               <div className='bottom_textbox'>{firstClass[1]}</div>
           </div>
-          <div className='box'>
-              <div className='top_textbox'>{secondClass[0]}</div>
-              <div className='bottom_textbox'>{secondClass[1]}</div>
-          </div>
-          <div className='box'>
-              <div className='top_textbox'>{thirdClass[0]}</div>
-              <div className='bottom_textbox'>{thirdClass[1]}</div>
-          </div>
-          <div className='box'>
-              <div className='top_textbox'>{fourthClass[0]}</div>
-              <div className='bottom_textbox'>{fourthClass[1]}</div>
-          </div>
-          <div className='box'>
-              <div className='top_textbox'>{fifthClass[0]}</div>
-              <div className='bottom_textbox'>{fifthClass[1]}</div>
-          </div>
-          <div className='box'>
-              <div className='top_textbox'>{sixthClass[0]}</div>
-              <div className='bottom_textbox'>{sixthClass[1]}</div>
-
-          <div name='box1'className='box' onClick={() => set1IsOpen(true)}>
-              <div className='top_textbox'>Sample Top {cscCourses[0][0]}</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
-          </div>
           <ReactModal style={customStyles} isOpen={modal1IsOpen} onRequestClose={() => set1IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text_course_name'>1Modal Text 1</div>
+              <div className='modal_text'>1Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text_description'>Modal Text 4</div>
+              <div className='modal_text'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
 
           <div name='box2'className='box' onClick={() => set2IsOpen(true)}>
-              <div className='top_textbox'>Sample Top Text</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{secondClass[0]}</div>
+              <div className='bottom_textbox'>{secondClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal2IsOpen} onRequestClose={() => set2IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text_course_name'>2Modal Text 1</div>
+              <div className='modal_text'>2Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text_description'>Modal Text 4</div>
+              <div className='modal_text'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
 
           <div name='box3'className='box' onClick={() => set3IsOpen(true)}>
-              <div className='top_textbox'>Sample Top Text</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{thirdClass[0]}</div>
+              <div className='bottom_textbox'>{thirdClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal3IsOpen} onRequestClose={() => set3IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text_course_name'>3Modal Text 1</div>
+              <div className='modal_text'>3Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text_description'>Modal Text 4</div>
+              <div className='modal_text'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
 
 
           <div name='box4'className='box' onClick={() => set4IsOpen(true)}>
-              <div className='top_textbox'>Sample Top Text</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{fourthClass[0]}</div>
+              <div className='bottom_textbox'>{fourthClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal4IsOpen} onRequestClose={() => set4IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text_course_name'>4Modal Text 1</div>
+              <div className='modal_text'>4Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text_description'>Modal Text 4</div>
+              <div className='modal_text'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
 
 
           <div name='box5'className='box' onClick={() => set5IsOpen(true)}>
-              <div className='top_textbox'>Sample Top Text</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{fifthClass[0]}</div>
+              <div className='bottom_textbox'>{fifthClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal5IsOpen} onRequestClose={() => set5IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text_course_name'>5Modal Text 1</div>
+              <div className='modal_text'>5Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text_description'>Modal Text 4</div>
+              <div className='modal_text'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
 
           <div name='box6'className='box' onClick={() => set6IsOpen(true)}>
-              <div className='top_textbox'>Sample Top Text</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{sixthClass[0]}</div>
+              <div className='bottom_textbox'>{sixthClass[1]}</div>
 
           </div>
           <ReactModal style={customStyles} isOpen={modal6IsOpen} onRequestClose={() => set6IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text_course_name'>6Modal Text 1</div>
+              <div className='modal_text'>6Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text_description'>Modal Text 4</div>
+              <div className='modal_text'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
@@ -295,7 +244,7 @@ const App = () => {
       </div>
 
   </div>
-
+    
   )
 }
 
