@@ -59,18 +59,28 @@ div [name=semester] {
 .boxes {
   width: 90%;
   height: 100rem;
-  margin: auto;
+  margin: 2rem auto 0 auto;
 }
 
 .box {
   background-color: #14213D;
-  height: 10rem;
-  width: 20rem;
+  height: 7rem;
+  width: 15rem;
   margin: 10px auto; 
   color: white;
+  font-size: 18px;
+  border-radius: 1.5rem;
 }
 
 .top_textbox {
   margin-bottom: 2rem;
   padding-top: 0.5rem;
+}
+
+.modal_text {
+  margin: 1rem;
+}
+
+ReactModal {
+  background-color: red;
 }

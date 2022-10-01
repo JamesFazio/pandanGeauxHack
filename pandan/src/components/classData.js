@@ -48,3 +48,8 @@ const cscCourses = [
                     [4890, 3, "Introduction to Theory of Computation", null, null, null],
         
                 ];
+
+export function getcscCourses() {
+    return cscCourses;
+}
+
