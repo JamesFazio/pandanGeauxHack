@@ -148,24 +148,24 @@ function findClasses() {
               <div className='bottom_textbox'>{firstClass[1]}</div>
           </div>
           <div className='box'>
-              <div className='top_textbox'>{secondClass}</div>
-              <div className='bottom_textbox'>{secondClass}</div>
+              <div className='top_textbox'>{secondClass[0]}</div>
+              <div className='bottom_textbox'>{secondClass[1]}</div>
           </div>
           <div className='box'>
-              <div className='top_textbox'>{thirdClass}</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{thirdClass[0]}</div>
+              <div className='bottom_textbox'>{thirdClass[1]}</div>
           </div>
           <div className='box'>
-              <div className='top_textbox'>{fourthClass}</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{fourthClass[0]}</div>
+              <div className='bottom_textbox'>{fourthClass[1]}</div>
           </div>
           <div className='box'>
-              <div className='top_textbox'>{fifthClass}</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{fifthClass[0]}</div>
+              <div className='bottom_textbox'>{fifthClass[1]}</div>
           </div>
           <div className='box'>
-              <div className='top_textbox'>{sixthClass}</div>
-              <div className='bottom_textbox'>Sample Bot Text</div>
+              <div className='top_textbox'>{sixthClass[0]}</div>
+              <div className='bottom_textbox'>{sixthClass[1]}</div>
           </div>
       </div>
 
