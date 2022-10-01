@@ -52,6 +52,7 @@ const cscCourses = [
 export function getcscCourses() {
     return cscCourses;
 }
+
 const cyb = [
     [2021, [[["CSC 1350", 4], ["MATH 1550", 5], ["ENGL 1001", null], ["BIO", null], [null, null], [null,null] ],
     [5],
