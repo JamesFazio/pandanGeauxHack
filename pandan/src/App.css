@@ -10,7 +10,7 @@
 }
 
 button {
-  background-color: gray;
+  background-color: #FCA311;
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
@@ -19,18 +19,21 @@ button {
   width: 7rem;
   text-align: center;
   font-size: 14px;
+  box-shadow:1px 1px 5px #14213D;
+  border-style: none;
+  color: white;
 }
 
 .selection_box {
   background-color: #E5E5E5;
   border-radius: 1rem;
-  width: 99%;
+  width: 90%;
   margin: auto;
 }
 
 .header  {
   background-color: #14213D;
-  height: 10rem;
+  height: 11rem;
   width: 100%;
   margin: auto;
   position: fixed;
@@ -44,8 +47,8 @@ h1 {
 }
 
 .logo {
-  height: 10rem;
-  width: 10rem;
+  height: 11rem;
+  width: 11rem;
   background-color: #FCA311;
   margin: 0 0 0 10px;
   display: inline-box;
@@ -70,17 +73,49 @@ div [name=semester] {
   color: white;
   font-size: 18px;
   border-radius: 1.5rem;
+  padding-top: 1rem;
 }
 
 .top_textbox {
   margin-bottom: 2rem;
   padding-top: 0.5rem;
+  font-size: larger;
 }
 
 .modal_text {
   margin: 1rem;
 }
 
-ReactModal {
-  background-color: red;
+.header_text {
+  display: inline-block;
+  color: white;
+  font-size: 50px;
+  padding-right: 11vw;
+  margin-top: 3%;
+}
+
+.modal_text_course_name {
+  color: #14213D;
+  font-size: x-large;
+  margin: auto;
+  text-align: center;
+  max-width: 250;
+  width: auto;
+}
+
+.modal_text {
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: large;
+  max-width: 250;
+  width: auto;
+}
+
+.modal_text_description {
+  margin: 1.5rem auto;
+  text-align: center;
+  font-size: large;
+  height: auto;
+  max-width: 250;
+  width: auto;
 }

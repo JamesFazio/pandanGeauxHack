@@ -106,10 +106,10 @@ const App = () => {
       left: '50%',
       right: 'auto',
       bottom: 'auto',
-      marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
       height: 300,
       width: 500,
+      borderRadius: 20,
     },
   };
 
@@ -135,9 +135,10 @@ const App = () => {
       <div className="App">
       <div className="header">
           <img className='logo' src="GeauxHackLogo.jpg"></img>
+          <h1 className='header_text'>Welcome to GEAUX DEG</h1>
       </div>
       
-      <h1>Welcome to GEAUX DEG</h1>
+      <h1></h1>
       <h2>Please select your degree, concentration, and booklet year.</h2>
 
       <div className='selection_box'>
@@ -215,10 +216,10 @@ const App = () => {
               <div className='bottom_textbox'>Sample Bot Text</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal1IsOpen} onRequestClose={() => set1IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>1Modal Text 1</div>
+              <div className='modal_text_course_name'>1Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
+              <div className='modal_text_description'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
@@ -228,10 +229,10 @@ const App = () => {
               <div className='bottom_textbox'>Sample Bot Text</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal2IsOpen} onRequestClose={() => set2IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>2Modal Text 1</div>
+              <div className='modal_text_course_name'>2Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
+              <div className='modal_text_description'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
@@ -241,10 +242,10 @@ const App = () => {
               <div className='bottom_textbox'>Sample Bot Text</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal3IsOpen} onRequestClose={() => set3IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>3Modal Text 1</div>
+              <div className='modal_text_course_name'>3Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
+              <div className='modal_text_description'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
@@ -255,10 +256,10 @@ const App = () => {
               <div className='bottom_textbox'>Sample Bot Text</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal4IsOpen} onRequestClose={() => set4IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>4Modal Text 1</div>
+              <div className='modal_text_course_name'>4Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
+              <div className='modal_text_description'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
@@ -269,10 +270,10 @@ const App = () => {
               <div className='bottom_textbox'>Sample Bot Text</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal5IsOpen} onRequestClose={() => set5IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>5Modal Text 1</div>
+              <div className='modal_text_course_name'>5Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
+              <div className='modal_text_description'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
@@ -283,10 +284,10 @@ const App = () => {
 
           </div>
           <ReactModal style={customStyles} isOpen={modal6IsOpen} onRequestClose={() => set6IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>6Modal Text 1</div>
+              <div className='modal_text_course_name'>6Modal Text 1</div>
               <div className='modal_text'>Modal Text 2</div>
               <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
+              <div className='modal_text_description'>Modal Text 4</div>
               <div className='modal_text'>Modal Text 5</div>
               <div className='modal_text'>Modal Text 6</div>
           </ReactModal>
