@@ -7,7 +7,7 @@ const seClassNumbers = ["1350", "1351", "3102", "3304", "3380", "4402", "4330", 
                         "4103", "1001", "2000"];
 
 const cscCourses = [
-                    [1350, 4, "Computer Science I for Majors", "3 hrs. lecture; 3 hrs. lab. Fundamentals of algorithm development, program design and structured programming using an object-oriented language.", null, "Credit or registration required in MATH 1550"],
+                    ["CSC 1350", 4, "Computer Science I for Majors", "3 hrs. lecture; 3 hrs. lab. Fundamentals of algorithm development, program design and structured programming using an object-oriented language.", null, "Credit or registration required in MATH 1550"],
                     [1351, 4, "Computer Science II for Majors", "3 hrs. lecture; 3 hrs. lab. Develops solutions to problems using an object-oriented approach and emphasizes the concepts of recursion; dynamic memory; data structures (lists, stacks, queues, trees); exception handling.", "Prerequisite of CSC 1350", "Credit or registration required in MATH 1550"],
                     [2259, 3, "Discrete Structures", "Set algebra including mappings and relations; algebraic structures including semigroups and groups; elements of the theory of directed and undirected graphs; Boolean algebra and propositional logic; these structures applied to various areas of computer science.", null, "Credit or registration required in CSC 1254 or CSC 1351 and MATH 1552"],
                     [2262, 3, "Numerical Methods", "Computer- oriented methods for solving numerical problems in science and engineering; numerical solutions to systems of simultaneous linear equations, nonlinear algebraic equations (root solving), differentiation and integration, ordinary differential equations, interpolation and curve fitting.", "Prerequisite of CSC 1254 or CSC 1351", "Credit or registration required in MATH 2090"],
@@ -48,3 +48,21 @@ const cscCourses = [
                     [4890, 3, "Introduction to Theory of Computation", null, null, null],
         
                 ];
+
+export function getcscCourses() {
+    return cscCourses;
+}
+const cyb = [
+    [2021, [[["CSC 1350", 4], ["MATH 1550", null], ["ENGL 1001", null], ["BIO", null]],
+    [5],
+    [6],
+    [5],
+    [5],
+    [5],
+    [5],
+    [5]]],
+    [2022]
+    ];
+    export function getcyb() {
+        return cyb;
+    }
