@@ -43,7 +43,6 @@ const [thirdClass, setThirdClass] = useState("Class 3")
 const [fourthClass, setFourthClass] = useState("Class 4")
 const [fifthClass, setFifthClass] = useState("Class 5")
 const [sixthClass, setSixthClass] = useState("Class 6")
-const [classInfo, setClassInfo] = useState("classinfo")
 var tempCon = [];
 var yearInfo = []; 
 var semInfo = [];
@@ -69,10 +68,11 @@ const customStyles = {
 
 function findClasses() {
   //setFirstClass(concentration.value)
-  if(concentration.value == 1){
+  if(concentration.value === 1){
     tempCon = getseg();
+    console.log(firstClass[0])
   }
-  else if(concentration.value == 2){
+  else if(concentration.value === 2){
     tempCon = getcyb();
   }
 
@@ -84,23 +84,24 @@ function findClasses() {
   setFourthClass(semInfo[3])
   setFifthClass(semInfo[4])
   setSixthClass(semInfo[5])
-  for(var i; i < cscCourses.length(); i++){
-    if(semInfo[0][0] == cscCourses[i][0]){
+
+  for(var i = 0; i < cscCourses.length; i++){
+    if(semInfo[0][0] === cscCourses[i][0]){
       setFirstClass(cscCourses[i]);
     }
-    if(semInfo[1][0] == cscCourses[i][0]){
+    if(semInfo[1][0] === cscCourses[i][0]){
       setSecondClass(cscCourses[i]);
     }
-    if(semInfo[2][0] == cscCourses[i][0]){
+    if(semInfo[2][0] === cscCourses[i][0]){
       setThirdClass(cscCourses[i]);
     }
-    if(semInfo[3][0] == cscCourses[i][0]){
+    if(semInfo[3][0] === cscCourses[i][0]){
       setFourthClass(cscCourses[i]);
     }
-    if(semInfo[4][0] == cscCourses[i][0]){
+    if(semInfo[4][0] === cscCourses[i][0]){
       setFifthClass(cscCourses[i]);
     }
-    if(semInfo[5][0] == cscCourses[i][0]){
+    if(semInfo[5][0] === cscCourses[i][0]){
       setSixthClass(cscCourses[i]);
     }
   }
@@ -165,12 +166,12 @@ function findClasses() {
               <div className='bottom_textbox'>{firstClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal1IsOpen} onRequestClose={() => set1IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>1Modal Text 1</div>
-              <div className='modal_text'>Modal Text 2</div>
-              <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
-              <div className='modal_text'>Modal Text 5</div>
-              <div className='modal_text'>Modal Text 6</div>
+              <div className='modal_text'>{firstClass[2]}</div>
+              <div className='modal_text'>{firstClass[0]}</div>
+              <div className='modal_text'>{firstClass[1]}</div>
+              <div className='modal_text'>{firstClass[3]}</div>
+              <div className='modal_text'>{firstClass[4]}</div>
+              <div className='modal_text'>{firstClass[5]}</div>
           </ReactModal>
 
           <div name='box2'className='box' onClick={() => set2IsOpen(true)}>
@@ -178,12 +179,12 @@ function findClasses() {
               <div className='bottom_textbox'>{secondClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal2IsOpen} onRequestClose={() => set2IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>2Modal Text 1</div>
-              <div className='modal_text'>Modal Text 2</div>
-              <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
-              <div className='modal_text'>Modal Text 5</div>
-              <div className='modal_text'>Modal Text 6</div>
+              <div className='modal_text'>{secondClass[2]}</div>
+              <div className='modal_text'>{secondClass[0]}</div>
+              <div className='modal_text'>{secondClass[1]}</div>
+              <div className='modal_text'>{secondClass[3]}</div>
+              <div className='modal_text'>{secondClass[4]}</div>
+              <div className='modal_text'>{secondClass[5]}</div>
           </ReactModal>
 
           <div name='box3'className='box' onClick={() => set3IsOpen(true)}>
@@ -191,12 +192,12 @@ function findClasses() {
               <div className='bottom_textbox'>{thirdClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal3IsOpen} onRequestClose={() => set3IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>3Modal Text 1</div>
-              <div className='modal_text'>Modal Text 2</div>
-              <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
-              <div className='modal_text'>Modal Text 5</div>
-              <div className='modal_text'>Modal Text 6</div>
+              <div className='modal_text'>{thirdClass[2]}</div>
+              <div className='modal_text'>{thirdClass[0]}</div>
+              <div className='modal_text'>{thirdClass[1]}</div>
+              <div className='modal_text'>{thirdClass[3]}</div>
+              <div className='modal_text'>{thirdClass[4]}</div>
+              <div className='modal_text'>{thirdClass[5]}</div>
           </ReactModal>
 
 
@@ -205,12 +206,12 @@ function findClasses() {
               <div className='bottom_textbox'>{fourthClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal4IsOpen} onRequestClose={() => set4IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>4Modal Text 1</div>
-              <div className='modal_text'>Modal Text 2</div>
-              <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
-              <div className='modal_text'>Modal Text 5</div>
-              <div className='modal_text'>Modal Text 6</div>
+              <div className='modal_text'>{fourthClass[2]}</div>
+              <div className='modal_text'>{fourthClass[0]}</div>
+              <div className='modal_text'>{fourthClass[1]}</div>
+              <div className='modal_text'>{fourthClass[3]}</div>
+              <div className='modal_text'>{fourthClass[4]}</div>
+              <div className='modal_text'>{fourthClass[5]}</div>
           </ReactModal>
 
 
@@ -219,12 +220,12 @@ function findClasses() {
               <div className='bottom_textbox'>{fifthClass[1]}</div>
           </div>
           <ReactModal style={customStyles} isOpen={modal5IsOpen} onRequestClose={() => set5IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>5Modal Text 1</div>
-              <div className='modal_text'>Modal Text 2</div>
-              <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
-              <div className='modal_text'>Modal Text 5</div>
-              <div className='modal_text'>Modal Text 6</div>
+              <div className='modal_text'>{fifthClass[2]}</div>
+              <div className='modal_text'>{fifthClass[0]}</div>
+              <div className='modal_text'>{fifthClass[1]}</div>
+              <div className='modal_text'>{fifthClass[3]}</div>
+              <div className='modal_text'>{fifthClass[4]}</div>
+              <div className='modal_text'>{fifthClass[5]}</div>
           </ReactModal>
 
           <div name='box6'className='box' onClick={() => set6IsOpen(true)}>
@@ -233,12 +234,12 @@ function findClasses() {
 
           </div>
           <ReactModal style={customStyles} isOpen={modal6IsOpen} onRequestClose={() => set6IsOpen(false)} shouldCloseOnOverlayClick>
-              <div className='modal_text'>6Modal Text 1</div>
-              <div className='modal_text'>Modal Text 2</div>
-              <div className='modal_text'>Modal Text 3</div>
-              <div className='modal_text'>Modal Text 4</div>
-              <div className='modal_text'>Modal Text 5</div>
-              <div className='modal_text'>Modal Text 6</div>
+              <div className='modal_text'>{sixthClass[2]}</div>
+              <div className='modal_text'>{sixthClass[0]}</div>
+              <div className='modal_text'>{sixthClass[1]}</div>
+              <div className='modal_text'>{sixthClass[3]}</div>
+              <div className='modal_text'>{sixthClass[4]}</div>
+              <div className='modal_text'>{sixthClass[5]}</div>
           </ReactModal>
 
       </div>
