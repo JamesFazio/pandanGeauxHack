@@ -32,6 +32,8 @@ const semesters = [
   {label: "Senior - Spring", value: 8},
 ]
 
+const [showChart, setShowChart] = useState(false)
+
 const [degree, setDegree] = useState(degrees[0].value)
 const [concentration, setConcentration] = useState(concentrations[0].value)
 const [year, setYear] = useState(years[0].value) 
@@ -68,6 +70,9 @@ const customStyles = {
 };
 
 function findClasses() {
+  if(showChart === false){
+    setShowChart(true)
+  }
   //setFirstClass(concentration.value)
   if(concentration.value === 1){
     tempCon = getseg();
@@ -166,6 +171,7 @@ function findClasses() {
           <h2>Click on each course below to see more information.</h2>
       </div>
 
+      {showChart &&
       <div className='boxes'>
           <div name='box1'className='box' onClick={() => set1IsOpen(true)}>
               <div className='top_textbox'>{firstClass[0]}</div>
@@ -248,7 +254,7 @@ function findClasses() {
               <div className='modal_text'>{sixthClass[5]}</div>
           </ReactModal>
 
-      </div>
+      </div>}
 
   </div>
     
