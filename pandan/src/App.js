@@ -61,7 +61,8 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
-    height: 300,
+    maxHeight: 800,
+    minHeight: 250,
     width: 500,
   },
 };
@@ -110,10 +111,11 @@ function findClasses() {
     return (
       <div className="App">
       <div className="header">
-          <img className='logo' src="GeauxHackLogo.jpg"></img>
+          <img className='logo' src="GeauxHackLogo.jpg" alt="Geaux Deg Logo"></img>
+          <div className='header_text'>Welcome to GEAUX DEG</div>
       </div>
       
-      <h1>Welcome to GEAUX DEG</h1>
+      
       <h2>Please select your degree, concentration, and booklet year.</h2>
 
       <div className='selection_box'>
@@ -158,6 +160,10 @@ function findClasses() {
               </div>
             </div>
           <button onClick={findClasses}>Get Schedule</button>
+      </div>
+
+      <div className='text_above_boxes'>
+          <h2>Click on each course below to see more information.</h2>
       </div>
 
       <div className='boxes'>
