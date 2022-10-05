@@ -49,12 +49,12 @@ var tempCon = [];
 var yearInfo = []; 
 var semInfo = [];
 var cscCourses = getcscCourses();
-const [modal1IsOpen, set1IsOpen] = React.useState(false);
-const [modal2IsOpen, set2IsOpen] = React.useState(false);
-const [modal3IsOpen, set3IsOpen] = React.useState(false);
-const [modal4IsOpen, set4IsOpen] = React.useState(false);
-const [modal5IsOpen, set5IsOpen] = React.useState(false);
-const [modal6IsOpen, set6IsOpen] = React.useState(false);
+const [modal1IsOpen, set1IsOpen] = useState(false);
+const [modal2IsOpen, set2IsOpen] = useState(false);
+const [modal3IsOpen, set3IsOpen] = useState(false);
+const [modal4IsOpen, set4IsOpen] = useState(false);
+const [modal5IsOpen, set5IsOpen] = useState(false);
+const [modal6IsOpen, set6IsOpen] = useState(false);
 const customStyles = {
   content: {
     top: '50%',
@@ -167,9 +167,10 @@ function findClasses() {
           <button onClick={findClasses}>Get Schedule</button>
       </div>
 
+      {showChart &&
       <div className='text_above_boxes'>
           <h2>Click on each course below to see more information.</h2>
-      </div>
+      </div>}
 
       {showChart &&
       <div className='boxes'>
